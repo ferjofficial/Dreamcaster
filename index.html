@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://dreamcaster.xyz/favicon.ico" type="image/x-icon">
     <title>Dreamcaster</title>
     <style>
@@ -12,6 +14,12 @@
             background-image: url('image.png'); /* Background image */
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
+            user-select: none; /* Prevent text selection */
+            -webkit-user-drag: none; /* Prevent image dragging */
+            -moz-user-drag: none;
+            -ms-user-drag: none;
+            user-drag: none;
         }
 
         #transparent-overlay {
@@ -20,12 +28,23 @@
             left: 0;
             width: 100%;
             height: 100%;
+            background: rgba(255, 255, 255, 0); /* Transparent overlay */
             pointer-events: none; /* Allows interaction with underlying content */
             z-index: 1;
         }
+
+        /* Prevent right-click context menu */
+        body {
+            -webkit-touch-callout: none; /* Prevent touch callout on mobile */
+        }
     </style>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault(); /* Disable right-click context menu */
+        });
+    </script>
 </head>
-<body cz-shortcut-listen="true">
+<body>
     <!-- Transparent overlay to hinder direct access -->
     <div id="transparent-overlay"></div>
 </body>
