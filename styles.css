@@ -1,0 +1,11 @@
+html, body {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%;
+    margin: 0;
+    /* Uncomment to use a background image */
+    /* background-image: url('path-to-your-image.jpg'); */
+    /* Uncomment to use a gradient instead of an image */
+    /* background: linear-gradient(to right, #000, #333); */
+    background-size: cover;
+    background-position: center;
+}
