@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "/Users/ferj/Desktop/Dreamcaster",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
