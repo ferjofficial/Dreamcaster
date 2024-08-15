@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="icon" href="https://dreamcaster.xyz/favicon.ico" type="image/x-icon">
     <title>Dreamcaster</title>
     <style>
-        body {
+        html, body {
+            overflow: hidden; /* Prevent scrolling */
+            height: 100%;
             margin: 0;
-            padding: 0;
-            overflow: hidden;
+            background-image: url('image.png'); /* Background image */
+            background-size: cover;
+            background-position: center;
         }
 
-        #background-image {
+        #transparent-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            z-index: -1;
+            pointer-events: none; /* Allows interaction with underlying content */
+            z-index: 1;
         }
-</style>
-    
-<link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+    </style>
+</head>
 <body cz-shortcut-listen="true">
-    <img id="background-image" src="image.png">
-
-
-</body></html>
+    <!-- Transparent overlay to hinder direct access -->
+    <div id="transparent-overlay"></div>
+</body>
+</html>

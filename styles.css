@@ -8,4 +8,10 @@ html, body {
     /* background: linear-gradient(to right, #000, #333); */
     background-size: cover;
     background-position: center;
+        background-image: url('image.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    
 }
